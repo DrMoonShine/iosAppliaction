@@ -15,6 +15,7 @@ const PostImage = styled.Image`
 const PostText = styled.Text`
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 120px;
 `;
 
 export const FullPostScreen = ({ route, navigation }) => {
@@ -49,11 +50,9 @@ export const FullPostScreen = ({ route, navigation }) => {
   }
 
   return (
-    <View style={{ padding: 20 }}>
-      
-      
+    <ScrollView style={{ padding: 20, maxHeight: '100%', paddingBottom: 64 }}>      
       <PostImage source={{ uri: data.imageUrl }} />
       <PostText>{data.text}</PostText>
-    </View>
+    </ScrollView>
   );
 };
